@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    이름 : <th:block th:text="${vo.user_name}"></th:block><br>
+    생년월일 : <th:block th:text="${vo.json_data.get('birthDate')}"></th:block><br>
+    성별 : <th:block th:text="${vo.json_data.get('gender')}"></th:block><br>
+    취미 : <th:block th:text="${vo.json_data.get('hobby')}"></th:block>
+</body>
+</html>

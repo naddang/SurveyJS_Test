@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+    <table>
+        <tr th:each="vo : ${list}" th:onclick="|location.href='/survey/${vo.idx}'|" style="cursor: pointer">
+            <td th:text="${vo.idx}"></td>
+            <td th:text="${vo.user_name}"></td>
+            <td th:text="${vo.json_data.get('gender')}"></td>
+            <td th:text="${vo.json_data.get('birthDate')}"></td>
+            <td th:text="${vo.json_data.get('hobby')}"></td>
+        </tr>
+    </table>
+</body>
+</html>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="com.survey.survey.dao.SurveyDao">
+    <insert id="insertSurvey" parameterType="com.survey.survey.vo.SurveyVo">
+        INSERT INTO survey(user_name, user_data)
+        VALUES (#{user_name}, #{user_data})
+    </insert>
+    <select id="selectSurveyList" resultType="com.survey.survey.vo.SurveyVo">
+        SELECT *
+        FROM survey
+    </select>
+    <select id="selectSurveyByIdx" parameterType="com.survey.survey.vo.SurveyVo" resultType="com.survey.survey.vo.SurveyVo">
+        SELECT *
+        FROM survey
+        WHERE `idx` = #{idx}
+    </select>
+</mapper>
